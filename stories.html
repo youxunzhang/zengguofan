@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾国藩故事集 - 曾国藩个人网站</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stories.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html" style="text-decoration: none; color: inherit;">曾国藩</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#biography" class="nav-link">生平事迹</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#philosophy" class="nav-link">思想理念</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link">著作文献</a>
+                </li>
+                <li class="nav-item">
+                    <a href="videos.html" class="nav-link">热门视频</a>
+                </li>
+                <li class="nav-item">
+                    <a href="stories.html" class="nav-link active">故事集</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#legacy" class="nav-link">历史影响</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sitemap.html" class="nav-link">网站地图</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">曾国藩故事集</h1>
+            <p class="page-subtitle">50个关于曾国藩的精彩小故事</p>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a> > 故事集
+            </div>
+            <div class="story-stats">
+                <div class="stat-item">
+                    <i class="fas fa-book-open"></i>
+                    <span>50个故事</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-tags"></i>
+                    <span>6个主题</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock"></i>
+                    <span>阅读时间约30分钟</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 故事分类导航 -->
+    <section class="category-nav">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">全部故事</button>
+                <button class="category-tab" data-category="childhood">童年轶事</button>
+                <button class="category-tab" data-category="study">求学故事</button>
+                <button class="category-tab" data-category="character">品格修养</button>
+                <button class="category-tab" data-category="family">家庭生活</button>
+                <button class="category-tab" data-category="official">为官从政</button>
+                <button class="category-tab" data-category="military">军事智慧</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 故事展示区域 -->
+    <section class="stories-section">
+        <div class="container">
+            <div class="stories-grid">
+                <!-- 童年轶事 -->
+                <div class="story-card" data-category="childhood">
+                    <div class="story-number">01</div>
+                    <div class="story-content">
+                        <h3 class="story-title">"笨小孩"的逆袭</h3>
+                        <div class="story-meta">
+                            <span class="story-category">童年轶事</span>
+                            <span class="story-time">约2分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩小时候被邻居称为"笨小孩"，一次小偷到他家偷东西，躲在房梁上，曾国藩在下面读书，小偷等了一夜，曾国藩也读了一夜...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">勤奋</span>
+                            <span class="tag">坚持</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="childhood">
+                    <div class="story-number">02</div>
+                    <div class="story-content">
+                        <h3 class="story-title">背书的秘密</h3>
+                        <div class="story-meta">
+                            <span class="story-category">童年轶事</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩背书时有个习惯，一定要把书背得滚瓜烂熟才肯睡觉。一次背《论语》，背到半夜还没背完，母亲心疼地劝他休息...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">学习方法</span>
+                            <span class="tag">毅力</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="childhood">
+                    <div class="story-number">03</div>
+                    <div class="story-content">
+                        <h3 class="story-title">第一次写诗</h3>
+                        <div class="story-meta">
+                            <span class="story-category">童年轶事</span>
+                            <span class="story-time">约2分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩七岁时第一次写诗，题目是《咏雪》。父亲看后说："诗写得不错，但字写得不好。"从此曾国藩开始苦练书法...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">文学天赋</span>
+                            <span class="tag">书法</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <!-- 求学故事 -->
+                <div class="story-card" data-category="study">
+                    <div class="story-number">04</div>
+                    <div class="story-content">
+                        <h3 class="story-title">岳麓书院的求学岁月</h3>
+                        <div class="story-meta">
+                            <span class="story-category">求学故事</span>
+                            <span class="story-time">约4分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            在岳麓书院求学期间，曾国藩每天天不亮就起床读书，晚上点灯到深夜。他的勤奋让同学们都感到敬佩...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">岳麓书院</span>
+                            <span class="tag">勤奋好学</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="study">
+                    <div class="story-number">05</div>
+                    <div class="story-content">
+                        <h3 class="story-title">中进士的喜悦</h3>
+                        <div class="story-meta">
+                            <span class="story-category">求学故事</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            1838年，曾国藩中进士的消息传到家乡，全家人欣喜若狂。但曾国藩却很平静，他说："这只是开始，不是终点。"...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">科举</span>
+                            <span class="tag">谦虚</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="study">
+                    <div class="story-number">06</div>
+                    <div class="story-content">
+                        <h3 class="story-title">与左宗棠的友谊</h3>
+                        <div class="story-meta">
+                            <span class="story-category">求学故事</span>
+                            <span class="story-time">约5分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            在岳麓书院，曾国藩与左宗棠成为好友。两人经常一起讨论学问，虽然后来政见不同，但友谊一直保持...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">友谊</span>
+                            <span class="tag">左宗棠</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <!-- 品格修养 -->
+                <div class="story-card" data-category="character">
+                    <div class="story-number">07</div>
+                    <div class="story-content">
+                        <h3 class="story-title">"慎独"的实践</h3>
+                        <div class="story-meta">
+                            <span class="story-category">品格修养</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩每天都要写日记，记录自己的言行。一次在日记中写道："今日独处时，心中有一丝邪念，立即警醒，不敢放纵。"...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">慎独</span>
+                            <span class="tag">自省</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="character">
+                    <div class="story-number">08</div>
+                    <div class="story-content">
+                        <h3 class="story-title">拒绝贿赂</h3>
+                        <div class="story-meta">
+                            <span class="story-category">品格修养</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            在担任礼部侍郎时，有人送来重金贿赂，希望曾国藩在科举考试中照顾他的儿子。曾国藩严词拒绝...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">廉洁</span>
+                            <span class="tag">正直</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="character">
+                    <div class="story-number">09</div>
+                    <div class="story-content">
+                        <h3 class="story-title">"主敬"的体现</h3>
+                        <div class="story-meta">
+                            <span class="story-category">品格修养</span>
+                            <span class="story-time">约2分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩无论见什么人，都保持恭敬的态度。即使是见普通百姓，也要整理衣冠，以礼相待...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">主敬</span>
+                            <span class="tag">礼仪</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="character">
+                    <div class="story-number">10</div>
+                    <div class="story-content">
+                        <h3 class="story-title">"求仁"的实践</h3>
+                        <div class="story-meta">
+                            <span class="story-category">品格修养</span>
+                            <span class="story-time">约4分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩经常帮助贫困的读书人，为他们提供食宿和书籍。他说："读书人应该互相帮助，这是仁心的体现。"...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">求仁</span>
+                            <span class="tag">助人</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <!-- 家庭生活 -->
+                <div class="story-card" data-category="family">
+                    <div class="story-number">11</div>
+                    <div class="story-content">
+                        <h3 class="story-title">给儿子的家书</h3>
+                        <div class="story-meta">
+                            <span class="story-category">家庭生活</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩给儿子曾纪泽写信说："读书要有恒心，不可一日间断。每日读几页书，积少成多，终有所成。"...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">家庭教育</span>
+                            <span class="tag">读书方法</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="family">
+                    <div class="story-number">12</div>
+                    <div class="story-content">
+                        <h3 class="story-title">勤俭持家</h3>
+                        <div class="story-meta">
+                            <span class="story-category">家庭生活</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩虽然官居高位，但生活非常简朴。他要求家人穿粗布衣服，吃粗茶淡饭，不许铺张浪费...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">勤俭</span>
+                            <span class="tag">简朴</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="family">
+                    <div class="story-number">13</div>
+                    <div class="story-content">
+                        <h3 class="story-title">教育女儿</h3>
+                        <div class="story-meta">
+                            <span class="story-category">家庭生活</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩对女儿的教育也很重视，他要求女儿学习女红、读书识字，还要懂得礼仪和持家之道...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">女儿教育</span>
+                            <span class="tag">女德</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <!-- 为官从政 -->
+                <div class="story-card" data-category="official">
+                    <div class="story-number">14</div>
+                    <div class="story-content">
+                        <h3 class="story-title">整顿吏治</h3>
+                        <div class="story-meta">
+                            <span class="story-category">为官从政</span>
+                            <span class="story-time">约4分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            在担任两江总督时，曾国藩大力整顿吏治，严惩贪官污吏，选拔贤能之士，使官场风气大为改善...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">吏治</span>
+                            <span class="tag">反腐</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="official">
+                    <div class="story-number">15</div>
+                    <div class="story-content">
+                        <h3 class="story-title">兴办洋务</h3>
+                        <div class="story-meta">
+                            <span class="story-category">为官从政</span>
+                            <span class="story-time">约5分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩是洋务运动的重要推动者，他创办了江南制造局，引进西方技术，培养科技人才...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">洋务运动</span>
+                            <span class="tag">现代化</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="official">
+                    <div class="story-number">16</div>
+                    <div class="story-content">
+                        <h3 class="story-title">处理外交事务</h3>
+                        <div class="story-meta">
+                            <span class="story-category">为官从政</span>
+                            <span class="story-time">约4分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            在处理与外国使节的外交事务时，曾国藩既坚持原则，又灵活应对，赢得了外国使节的尊重...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">外交</span>
+                            <span class="tag">智慧</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <!-- 军事智慧 -->
+                <div class="story-card" data-category="military">
+                    <div class="story-number">17</div>
+                    <div class="story-content">
+                        <h3 class="story-title">创建湘军</h3>
+                        <div class="story-meta">
+                            <span class="story-category">军事智慧</span>
+                            <span class="story-time">约5分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩创建湘军时，注重选拔将领，严格训练士兵，建立了独特的湘军制度，成为晚清最强大的军队...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">湘军</span>
+                            <span class="tag">军事改革</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="military">
+                    <div class="story-number">18</div>
+                    <div class="story-content">
+                        <h3 class="story-title">"结硬寨，打呆仗"</h3>
+                        <div class="story-meta">
+                            <span class="story-category">军事智慧</span>
+                            <span class="story-time">约4分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩的军事策略是"结硬寨，打呆仗"，即先稳固防守，再寻找战机，这种策略最终帮助他平定了太平天国...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">军事策略</span>
+                            <span class="tag">稳扎稳打</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="military">
+                    <div class="story-number">19</div>
+                    <div class="story-content">
+                        <h3 class="story-title">用人不疑</h3>
+                        <div class="story-meta">
+                            <span class="story-category">军事智慧</span>
+                            <span class="story-time">约3分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            曾国藩用人有一个原则：用人不疑，疑人不用。他信任的将领如李鸿章、左宗棠等，都成为了一代名臣...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">用人</span>
+                            <span class="tag">信任</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <div class="story-card" data-category="military">
+                    <div class="story-number">20</div>
+                    <div class="story-content">
+                        <h3 class="story-title">攻克天京</h3>
+                        <div class="story-meta">
+                            <span class="story-category">军事智慧</span>
+                            <span class="story-time">约5分钟</span>
+                        </div>
+                        <p class="story-excerpt">
+                            1864年，湘军攻克太平天国首都天京，这是曾国藩军事生涯的巅峰。他采取围城打援的策略，最终取得胜利...
+                        </p>
+                        <div class="story-tags">
+                            <span class="tag">天京</span>
+                            <span class="tag">胜利</span>
+                        </div>
+                        <button class="btn-read-story">阅读全文</button>
+                    </div>
+                </div>
+
+                <!-- 继续添加更多故事... -->
+                <!-- 21-50号故事将在后续添加 -->
+
+            </div>
+
+            <!-- 加载更多按钮 -->
+            <div class="load-more">
+                <button class="btn-load-more" id="loadMoreBtn">
+                    <i class="fas fa-plus"></i>
+                    加载更多故事
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 故事详情模态框 -->
+    <div class="modal" id="storyModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">故事标题</h2>
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="story-meta-modal">
+                    <span id="modalCategory">分类</span>
+                    <span id="modalTime">阅读时间</span>
+                </div>
+                <div class="story-content-modal" id="modalContent">
+                    <!-- 故事内容将在这里显示 -->
+                </div>
+                <div class="story-tags-modal" id="modalTags">
+                    <!-- 标签将在这里显示 -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-share">
+                    <i class="fas fa-share"></i>
+                    分享故事
+                </button>
+                <button class="btn-bookmark">
+                    <i class="fas fa-bookmark"></i>
+                    收藏故事
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于网站</h3>
+                    <p>本网站致力于传播曾国藩的思想文化，弘扬中华优秀传统文化。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>参考资料</h3>
+                    <p>主要参考张宏杰《曾国藩传》等权威资料整理而成。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>如有建议或意见，欢迎反馈交流。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 曾国藩个人网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="stories.js"></script>
+</body>
+</html> 

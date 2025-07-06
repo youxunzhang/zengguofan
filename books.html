@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曾国藩著作 - 书籍文献</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="books.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2><a href="index.html" style="text-decoration: none; color: inherit;">曾国藩</a></h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html#home" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#biography" class="nav-link">生平事迹</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#philosophy" class="nav-link">思想理念</a>
+                </li>
+                <li class="nav-item">
+                    <a href="books.html" class="nav-link active">著作文献</a>
+                </li>
+                <li class="nav-item">
+                    <a href="videos.html" class="nav-link">热门视频</a>
+                </li>
+                <li class="nav-item">
+                    <a href="stories.html" class="nav-link">故事集</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#legacy" class="nav-link">历史影响</a>
+                </li>
+                <li class="nav-item">
+                    <a href="sitemap.html" class="nav-link">网站地图</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面头部 -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">曾国藩著作文献</h1>
+            <p class="page-subtitle">探索晚清中兴名臣的智慧结晶</p>
+            <div class="breadcrumb">
+                <a href="index.html">首页</a> > 著作文献
+            </div>
+        </div>
+    </section>
+
+    <!-- 书籍分类导航 -->
+    <section class="category-nav">
+        <div class="container">
+            <div class="category-tabs">
+                <button class="category-tab active" data-category="all">全部著作</button>
+                <button class="category-tab" data-category="letters">家书家训</button>
+                <button class="category-tab" data-category="diary">日记笔记</button>
+                <button class="category-tab" data-category="philosophy">哲学思想</button>
+                <button class="category-tab" data-category="military">军事著作</button>
+                <button class="category-tab" data-category="collected">全集汇编</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 书籍展示区域 -->
+    <section class="books-section">
+        <div class="container">
+            <div class="books-grid">
+                <!-- 家书家训类 -->
+                <div class="book-card" data-category="letters">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">📖</div>
+                        </div>
+                        <div class="book-badge">经典</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《曾国藩家书》</h3>
+                        <p class="book-subtitle">家训经典，修身指南</p>
+                        <div class="book-meta">
+                            <span class="book-year">1860-1872</span>
+                            <span class="book-pages">约1500封</span>
+                        </div>
+                        <p class="book-description">
+                            收录曾国藩写给家人的书信，内容涵盖修身、齐家、教育、为官等方面。是研究曾国藩思想的重要资料，也是中国传统家训文化的经典之作。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">家训</span>
+                            <span class="tag">修身</span>
+                            <span class="tag">教育</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="letters">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">📝</div>
+                        </div>
+                        <div class="book-badge">珍贵</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《曾国藩家训》</h3>
+                        <p class="book-subtitle">家庭教育宝典</p>
+                        <div class="book-meta">
+                            <span class="book-year">1860-1872</span>
+                            <span class="book-pages">精选汇编</span>
+                        </div>
+                        <p class="book-description">
+                            从家书中精选出的教育理念和家庭管理智慧，专门针对子女教育和家庭建设，体现了曾国藩深厚的家庭教育思想。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">教育</span>
+                            <span class="tag">家庭</span>
+                            <span class="tag">管理</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 日记笔记类 -->
+                <div class="book-card" data-category="diary">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">📔</div>
+                        </div>
+                        <div class="book-badge">珍贵</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《曾国藩日记》</h3>
+                        <p class="book-subtitle">修身自省记录</p>
+                        <div class="book-meta">
+                            <span class="book-year">1838-1872</span>
+                            <span class="book-pages">34年记录</span>
+                        </div>
+                        <p class="book-description">
+                            记录了曾国藩的日常生活、思想变化和修身过程，展现了他严格自律的精神品质和不断自我反省的人生态度。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">日记</span>
+                            <span class="tag">修身</span>
+                            <span class="tag">自省</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 哲学思想类 -->
+                <div class="book-card" data-category="philosophy">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">📜</div>
+                        </div>
+                        <div class="book-badge">独特</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《冰鉴》</h3>
+                        <p class="book-subtitle">相术识人智慧</p>
+                        <div class="book-meta">
+                            <span class="book-year">1860年代</span>
+                            <span class="book-pages">相术著作</span>
+                        </div>
+                        <p class="book-description">
+                            曾国藩的相术著作，通过观察人的相貌、举止来判断其性格和才能，体现了他的识人智慧和用人哲学。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">相术</span>
+                            <span class="tag">识人</span>
+                            <span class="tag">智慧</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="philosophy">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">🎯</div>
+                        </div>
+                        <div class="book-badge">重要</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《修身要诀》</h3>
+                        <p class="book-subtitle">修身养性指南</p>
+                        <div class="book-meta">
+                            <span class="book-year">1860年代</span>
+                            <span class="book-pages">修身方法</span>
+                        </div>
+                        <p class="book-description">
+                            总结曾国藩的修身方法和理念，包括"慎独"、"主敬"、"求仁"、"习劳"等修身要诀，是理解其思想体系的重要著作。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">修身</span>
+                            <span class="tag">哲学</span>
+                            <span class="tag">方法</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 军事著作类 -->
+                <div class="book-card" data-category="military">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">⚔️</div>
+                        </div>
+                        <div class="book-badge">军事</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《湘军志》</h3>
+                        <p class="book-subtitle">湘军创建与管理</p>
+                        <div class="book-meta">
+                            <span class="book-year">1853-1864</span>
+                            <span class="book-pages">军事著作</span>
+                        </div>
+                        <p class="book-description">
+                            记录湘军的创建、训练、作战和管理经验，体现了曾国藩的军事思想和组织管理能力，对晚清军事改革产生重要影响。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">军事</span>
+                            <span class="tag">管理</span>
+                            <span class="tag">组织</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="military">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">🏛️</div>
+                        </div>
+                        <div class="book-badge">政治</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《奏折集》</h3>
+                        <p class="book-subtitle">政治军事奏折</p>
+                        <div class="book-meta">
+                            <span class="book-year">1838-1872</span>
+                            <span class="book-pages">政治文献</span>
+                        </div>
+                        <p class="book-description">
+                            收录曾国藩向朝廷呈递的奏折，内容涉及政治、军事、经济、教育等各个方面，是研究晚清政治史的重要资料。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">政治</span>
+                            <span class="tag">奏折</span>
+                            <span class="tag">历史</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 全集汇编类 -->
+                <div class="book-card" data-category="collected">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">📚</div>
+                        </div>
+                        <div class="book-badge">全集</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《曾国藩全集》</h3>
+                        <p class="book-subtitle">完整著作汇编</p>
+                        <div class="book-meta">
+                            <span class="book-year">现代汇编</span>
+                            <span class="book-pages">多卷本</span>
+                        </div>
+                        <p class="book-description">
+                            收录了曾国藩的奏折、书信、诗文、日记等各类作品，是研究曾国藩思想和晚清历史的最全面资料。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">全集</span>
+                            <span class="tag">汇编</span>
+                            <span class="tag">历史</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card" data-category="collected">
+                    <div class="book-cover">
+                        <div class="book-image">
+                            <div class="book-icon">📖</div>
+                        </div>
+                        <div class="book-badge">精选</div>
+                    </div>
+                    <div class="book-info">
+                        <h3 class="book-title">《曾国藩文选》</h3>
+                        <p class="book-subtitle">精选文章汇编</p>
+                        <div class="book-meta">
+                            <span class="book-year">现代精选</span>
+                            <span class="book-pages">精选本</span>
+                        </div>
+                        <p class="book-description">
+                            从曾国藩全集中精选出的重要文章和书信，便于读者快速了解曾国藩的核心思想和主要成就。
+                        </p>
+                        <div class="book-tags">
+                            <span class="tag">精选</span>
+                            <span class="tag">文选</span>
+                            <span class="tag">入门</span>
+                        </div>
+                        <div class="book-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-quote">经典语录</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 书籍详情模态框 -->
+    <div class="modal" id="bookModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="book-detail">
+                    <div class="book-detail-cover">
+                        <div class="book-detail-image">
+                            <div class="book-detail-icon">📖</div>
+                        </div>
+                    </div>
+                    <div class="book-detail-info">
+                        <h2 class="book-detail-title">《曾国藩家书》</h2>
+                        <div class="book-detail-meta">
+                            <span class="meta-item">作者：曾国藩</span>
+                            <span class="meta-item">年代：1860-1872</span>
+                            <span class="meta-item">类型：家书家训</span>
+                        </div>
+                        <div class="book-detail-description">
+                            <h3>内容简介</h3>
+                            <p>《曾国藩家书》收录了曾国藩在1860年至1872年间写给家人的书信，共计约1500封。这些书信内容广泛，涉及修身、齐家、教育、为官、处世等各个方面，是研究曾国藩思想的重要资料。</p>
+                            
+                            <h3>主要特点</h3>
+                            <ul>
+                                <li>修身养性：强调自我修养和道德完善</li>
+                                <li>家庭教育：重视子女教育和家庭和睦</li>
+                                <li>处世哲学：传授为人处世的智慧</li>
+                                <li>为官之道：分享从政经验和官场智慧</li>
+                            </ul>
+                            
+                            <h3>历史价值</h3>
+                            <p>《曾国藩家书》不仅是一部家训经典，更是中国传统文化的重要组成部分。它体现了儒家思想在近代的传承和发展，对后世产生了深远影响。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 经典语录模态框 -->
+    <div class="modal" id="quoteModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <div class="quote-detail">
+                    <h2 class="quote-title">经典语录</h2>
+                    <div class="quotes-container">
+                        <div class="quote-item">
+                            <blockquote>"天下古今之庸人，皆以一惰字致败；天下古今之才人，皆以一傲字致败。"</blockquote>
+                            <cite>— 《曾国藩家书》</cite>
+                        </div>
+                        <div class="quote-item">
+                            <blockquote>"慎独则心安，主敬则身强，求仁则人悦，习劳则神钦。"</blockquote>
+                            <cite>— 《曾国藩家书》</cite>
+                        </div>
+                        <div class="quote-item">
+                            <blockquote>"不为圣贤，便为禽兽；不问收获，但问耕耘。"</blockquote>
+                            <cite>— 《曾国藩家书》</cite>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于网站</h3>
+                    <p>本网站致力于传播曾国藩的思想文化，弘扬中华优秀传统文化。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>参考资料</h3>
+                    <p>主要参考张宏杰《曾国藩传》等权威资料整理而成。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p>如有建议或意见，欢迎反馈交流。</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 曾国藩个人网站. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="books.js"></script>
+</body>
+</html> 
