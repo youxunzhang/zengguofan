@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // 观察所有需要动画的元素
-    const animatedElements = document.querySelectorAll('.timeline-item, .philosophy-card, .work-card');
+    const animatedElements = document.querySelectorAll('.timeline-item, .philosophy-card, .work-card, .value-card, .quote-card, .local-card, .faq-item');
     animatedElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // 添加鼠标悬停效果
-    const cards = document.querySelectorAll('.philosophy-card, .work-card');
+    const cards = document.querySelectorAll('.philosophy-card, .work-card, .value-card, .quote-card, .local-card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-10px) scale(1.02)';
@@ -98,6 +98,34 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(-5px) scale(1.02)';
         });
         
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+
+    // FAQ交互功能
+    const faqItems = document.querySelectorAll('.faq-item h3');
+    faqItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            
+            // 切换显示状态
+            if (answer.style.display === 'none' || answer.style.display === '') {
+                answer.style.display = 'block';
+                faqItem.classList.add('active');
+            } else {
+                answer.style.display = 'none';
+                faqItem.classList.remove('active');
+            }
+        });
+    });
+
+    // 默认隐藏所有FAQ答案
+    const faqAnswers = document.querySelectorAll('.faq-answer');
+    faqAnswers.forEach(answer => {
+        answer.style.display = 'none';
+    });
         item.addEventListener('mouseleave', function() {
             this.style.transform = 'translateY(0) scale(1)';
         });
