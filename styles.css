@@ -53,6 +53,91 @@ body {
     gap: 2rem;
 }
 
+/* 收藏按钮样式 */
+.bookmark-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.bookmark-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.bookmark-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.bookmark-btn:active {
+    transform: translateY(0);
+}
+
+.bookmark-btn.bookmarked {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.bookmark-btn.bookmarked:hover {
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+}
+
+.bookmark-btn i {
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.bookmark-btn:hover i {
+    transform: scale(1.1);
+}
+
+.bookmark-btn.bookmarked i {
+    color: #fff;
+}
+
+.bookmark-text {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* 收藏消息提示样式 */
+.bookmark-message {
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.bookmark-message.show {
+    transform: translateX(0);
+}
+
+.bookmark-message.success {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+}
+
+.bookmark-message.info {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+}
+
 .nav-link {
     text-decoration: none;
     color: #2c3e50;
@@ -795,6 +880,21 @@ body {
         transition: 0.3s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
+    }
+    
+    /* 移动端收藏按钮样式 */
+    .bookmark-btn-container {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    
+    .bookmark-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+    
+    .bookmark-text {
+        display: none;
     }
     
     .nav-menu.active {

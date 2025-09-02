@@ -191,6 +191,13 @@
                 <li><a href="#faq">常见问题</a></li>
                 <li><a href="sitemap.html">网站地图</a></li>
             </ul>
+            <!-- 收藏按钮 -->
+            <div class="bookmark-btn-container">
+                <button class="bookmark-btn" id="bookmarkBtn" title="收藏页面">
+                    <i class="fas fa-bookmark" id="bookmarkIcon"></i>
+                    <span class="bookmark-text" id="bookmarkText">收藏</span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -656,6 +663,89 @@
         // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', () => {
             detectMobileAndAdjust();
+        });
+    </script>
+
+    <!-- 收藏功能JavaScript -->
+    <script>
+        // 收藏功能
+        const bookmarkBtn = document.getElementById('bookmarkBtn');
+        const bookmarkIcon = document.getElementById('bookmarkIcon');
+        const bookmarkText = document.getElementById('bookmarkText');
+        
+        // 检查页面是否已被收藏
+        function checkBookmarkStatus() {
+            const currentUrl = window.location.href;
+            const bookmarks = JSON.parse(localStorage.getItem('zengguofan_bookmarks') || '[]');
+            const isBookmarked = bookmarks.includes(currentUrl);
+            
+            updateBookmarkUI(isBookmarked);
+        }
+        
+        // 更新收藏按钮UI
+        function updateBookmarkUI(isBookmarked) {
+            if (isBookmarked) {
+                bookmarkIcon.className = 'fas fa-bookmark bookmark-active';
+                bookmarkText.textContent = '已收藏';
+                bookmarkBtn.classList.add('bookmarked');
+            } else {
+                bookmarkIcon.className = 'fas fa-bookmark';
+                bookmarkText.textContent = '收藏';
+                bookmarkBtn.classList.remove('bookmarked');
+            }
+        }
+        
+        // 切换收藏状态
+        function toggleBookmark() {
+            const currentUrl = window.location.href;
+            const bookmarks = JSON.parse(localStorage.getItem('zengguofan_bookmarks') || '[]');
+            const isBookmarked = bookmarks.includes(currentUrl);
+            
+            if (isBookmarked) {
+                // 移除收藏
+                const newBookmarks = bookmarks.filter(url => url !== currentUrl);
+                localStorage.setItem('zengguofan_bookmarks', JSON.stringify(newBookmarks));
+                updateBookmarkUI(false);
+                showBookmarkMessage('已取消收藏', false);
+            } else {
+                // 添加收藏
+                bookmarks.push(currentUrl);
+                localStorage.setItem('zengguofan_bookmarks', JSON.stringify(bookmarks));
+                updateBookmarkUI(true);
+                showBookmarkMessage('已添加到收藏', true);
+            }
+        }
+        
+        // 显示收藏消息提示
+        function showBookmarkMessage(message, isSuccess) {
+            // 创建消息提示元素
+            const messageEl = document.createElement('div');
+            messageEl.className = `bookmark-message ${isSuccess ? 'success' : 'info'}`;
+            messageEl.textContent = message;
+            
+            // 添加到页面
+            document.body.appendChild(messageEl);
+            
+            // 显示动画
+            setTimeout(() => {
+                messageEl.classList.add('show');
+            }, 100);
+            
+            // 自动隐藏
+            setTimeout(() => {
+                messageEl.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(messageEl);
+                }, 300);
+            }, 2000);
+        }
+        
+        // 绑定收藏按钮点击事件
+        bookmarkBtn.addEventListener('click', toggleBookmark);
+        
+        // 页面加载时检查收藏状态
+        document.addEventListener('DOMContentLoaded', () => {
+            checkBookmarkStatus();
         });
     </script>
 
