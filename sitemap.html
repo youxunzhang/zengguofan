@@ -7,9 +7,90 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="sitemap.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <!-- 浮动分享按钮 -->
+    <div class="floating-share-btn" id="floatingShareBtn">
+        <i class="fas fa-share-alt"></i>
+        <span class="share-tooltip">分享页面</span>
+    </div>
+
+    <!-- 分享模态框 -->
+    <div class="share-modal" id="shareModal">
+        <div class="share-modal-content">
+            <div class="share-modal-header">
+                <h3>分享到社交媒体</h3>
+                <button class="share-modal-close" id="shareModalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="share-modal-body">
+                <div class="share-platforms">
+                    <!-- Facebook -->
+                    <button class="share-platform facebook" onclick="shareToFacebook()">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </button>
+                    
+                    <!-- Twitter/X -->
+                    <button class="share-platform twitter" onclick="shareToTwitter()">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter/X</span>
+                    </button>
+                    
+                    <!-- LinkedIn -->
+                    <button class="share-platform linkedin" onclick="shareToLinkedIn()">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </button>
+                    
+                    <!-- WhatsApp -->
+                    <button class="share-platform whatsapp" onclick="shareToWhatsApp()">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </button>
+                    
+                    <!-- Telegram -->
+                    <button class="share-platform telegram" onclick="shareToTelegram()">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span>Telegram</span>
+                    </button>
+                    
+                    <!-- Reddit -->
+                    <button class="share-platform reddit" onclick="shareToReddit()">
+                        <i class="fab fa-reddit-alien"></i>
+                        <span>Reddit</span>
+                    </button>
+                    
+                    <!-- Pinterest -->
+                    <button class="share-platform pinterest" onclick="shareToPinterest()">
+                        <i class="fab fa-pinterest-p"></i>
+                        <span>Pinterest</span>
+                    </button>
+                    
+                    <!-- Email -->
+                    <button class="share-platform email" onclick="shareToEmail()">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </button>
+                </div>
+                
+                <div class="share-link-section">
+                    <label for="shareLink">页面链接：</label>
+                    <div class="share-link-container">
+                        <input type="text" id="shareLink" value="https://zengguofan.com/sitemap.html" readonly>
+                        <button class="copy-link-btn" onclick="copyShareLink()">
+                            <i class="fas fa-copy"></i>
+                            复制
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
@@ -415,5 +496,161 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- 分享功能JavaScript -->
+    <script>
+        // 分享功能
+        const floatingShareBtn = document.getElementById('floatingShareBtn');
+        const shareModal = document.getElementById('shareModal');
+        const shareModalClose = document.getElementById('shareModalClose');
+
+        // 显示/隐藏分享模态框
+        floatingShareBtn.addEventListener('click', () => {
+            shareModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        shareModalClose.addEventListener('click', () => {
+            shareModal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        // 点击模态框外部关闭
+        window.addEventListener('click', (e) => {
+            if (e.target === shareModal) {
+                shareModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // 分享到Facebook
+        function shareToFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('网站地图 - 曾国藩个人网站 | 完整的网站导航指南');
+            const description = encodeURIComponent('曾国藩个人网站的完整导航指南，包含首页、生平事迹、思想理念、著作文献、热门视频、故事集、历史影响等所有页面链接。');
+            const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${title}&description=${description}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 分享到Twitter/X
+        function shareToTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('网站地图 - 曾国藩个人网站 | 完整的网站导航指南');
+            const shareUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 分享到LinkedIn
+        function shareToLinkedIn() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('网站地图 - 曾国藩个人网站');
+            const summary = encodeURIComponent('曾国藩个人网站的完整导航指南，包含首页、生平事迹、思想理念、著作文献、热门视频、故事集、历史影响等所有页面链接。');
+            const shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${url}&title=${title}&summary=${summary}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 分享到WhatsApp
+        function shareToWhatsApp() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('网站地图 - 曾国藩个人网站 | 完整的网站导航指南');
+            const shareUrl = `https://wa.me/?text=${text}%20${url}`;
+            window.open(shareUrl, '_blank');
+        }
+
+        // 分享到Telegram
+        function shareToTelegram() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('网站地图 - 曾国藩个人网站 | 完整的网站导航指南');
+            const shareUrl = `https://t.me/share/url?url=${url}&text=${text}`;
+            window.open(shareUrl, '_blank');
+        }
+
+        // 分享到Reddit
+        function shareToReddit() {
+            const url = encodeURIComponent(window.location.href);
+            const title = encodeURIComponent('网站地图 - 曾国藩个人网站 | 完整的网站导航指南');
+            const shareUrl = `https://reddit.com/submit?url=${url}&title=${title}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 分享到Pinterest
+        function shareToPinterest() {
+            const url = encodeURIComponent(window.location.href);
+            const description = encodeURIComponent('网站地图 - 曾国藩个人网站 | 完整的网站导航指南');
+            const media = encodeURIComponent('zengguofan.png');
+            const shareUrl = `https://pinterest.com/pin/create/button/?url=${url}&description=${description}&media=${media}`;
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // 分享到Email
+        function shareToEmail() {
+            const subject = encodeURIComponent('网站地图 - 曾国藩个人网站 | 完整的网站导航指南');
+            const body = encodeURIComponent(`我发现了一个关于曾国藩的精彩网站！
+
+曾国藩个人网站的完整导航指南，包含首页、生平事迹、思想理念、著作文献、热门视频、故事集、历史影响等所有页面链接。
+
+网站链接：${window.location.href}
+
+推荐给您，希望对您有所帮助！`);
+            const shareUrl = `mailto:?subject=${subject}&body=${body}`;
+            window.location.href = shareUrl;
+        }
+
+        // 复制分享链接
+        function copyShareLink() {
+            const shareLink = document.getElementById('shareLink');
+            shareLink.select();
+            shareLink.setSelectionRange(0, 99999);
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(shareLink.value).then(() => {
+                    showCopySuccess();
+                });
+            } else {
+                document.execCommand('copy');
+                showCopySuccess();
+            }
+        }
+
+        // 显示复制成功提示
+        function showCopySuccess() {
+            const copyBtn = document.querySelector('.copy-link-btn');
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check"></i> 已复制';
+            copyBtn.style.backgroundColor = '#28a745';
+            
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+                copyBtn.style.backgroundColor = '#6c757d';
+            }, 2000);
+        }
+
+        // 检测移动设备并调整分享方式
+        function detectMobileAndAdjust() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                // 移动设备上使用原生分享API（如果支持）
+                if (navigator.share) {
+                    floatingShareBtn.addEventListener('click', async () => {
+                        try {
+                            await navigator.share({
+                                title: '网站地图 - 曾国藩个人网站',
+                                text: '曾国藩个人网站的完整导航指南，包含首页、生平事迹、思想理念、著作文献、热门视频、故事集、历史影响等所有页面链接。',
+                                url: window.location.href
+                            });
+                        } catch (err) {
+                            // 如果原生分享失败，显示模态框
+                            shareModal.style.display = 'block';
+                            document.body.style.overflow = 'hidden';
+                        }
+                    });
+                }
+            }
+        }
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', () => {
+            detectMobileAndAdjust();
+        });
+    </script>
 </body>
 </html> 
