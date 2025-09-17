@@ -951,7 +951,9 @@ body {
     
     .value-grid,
     .quotes-grid,
-    .local-grid {
+    .local-grid,
+    .featured-grid,
+    .hub-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
@@ -1017,6 +1019,8 @@ body {
 .value-card,
 .quote-card,
 .local-card,
+.featured-card,
+.hub-card,
 .faq-item {
     animation: fadeInUp 0.6s ease forwards;
 }
@@ -1066,6 +1070,142 @@ body {
 .faq-item:nth-child(8) { animation-delay: 0.8s; }
 .faq-item:nth-child(9) { animation-delay: 0.9s; } 
 
+/* 新增：新闻快递 */
+.news-list {
+    list-style: none;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    padding-left: 0;
+}
+
+.news-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    margin-bottom: 0.8rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.news-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.news-date {
+    flex: 0 0 auto;
+    font-weight: 700;
+    color: #e74c3c;
+    background: #fff5f3;
+    border: 1px solid #ffe0da;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.news-link {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    color: #e74c3c;
+}
+
+/* 新增：精选内容与深入学习栅格 */
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.featured-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.featured-card i {
+    font-size: 28px;
+    color: #764ba2;
+}
+
+.featured-card h3 {
+    margin-top: 0.8rem;
+    margin-bottom: 0.25rem;
+    font-size: 1.1rem;
+    color: #2c3e50;
+}
+
+.featured-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.featured-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* 新增：学习/哲学专题栅格 */
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.hub-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.hub-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.hub-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 0.75rem;
+}
+
+.hub-card h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+}
+
+.hub-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
 /* 分享功能样式 */
 .floating-share-btn {
     position: fixed;
