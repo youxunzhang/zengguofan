@@ -2,9 +2,9 @@
 
 /* 页面头部 */
 .page-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(120deg, rgba(138, 20, 23, 0.95), rgba(179, 26, 29, 0.88));
     color: white;
-    padding: 120px 0 60px;
+    padding: 140px 0 80px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -13,55 +13,62 @@
 .page-header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    inset: 0;
+    background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 60%),
+                radial-gradient(circle at 75% 30%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0) 55%);
+    opacity: 0.9;
 }
 
 .page-title {
-    font-size: 3.5rem;
+    font-size: 3.4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     position: relative;
     z-index: 2;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.12em;
 }
 
 .page-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 2.2rem;
     opacity: 0.9;
     position: relative;
     z-index: 2;
+    letter-spacing: 0.06em;
 }
 
 .breadcrumb {
     position: relative;
     z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.18);
+    padding: 0.6rem 1.8rem;
+    border-radius: 999px;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
 }
 
 .breadcrumb a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: opacity 0.3s ease;
 }
 
 .breadcrumb a:hover {
-    color: white;
+    opacity: 0.8;
 }
 
 /* 分类导航 */
 .category-nav {
-    background: white;
-    padding: 2rem 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    padding: 2.2rem 0;
+    border-bottom: 1px solid rgba(179, 26, 29, 0.12);
     position: sticky;
-    top: 70px;
+    top: 78px;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 40px rgba(47, 28, 25, 0.08);
 }
 
 .category-tabs {
@@ -72,34 +79,33 @@
 }
 
 .category-tab {
-    padding: 12px 24px;
-    border: 2px solid #e74c3c;
-    background: transparent;
-    color: #e74c3c;
-    border-radius: 25px;
+    padding: 12px 26px;
+    border: 1px solid transparent;
+    background: rgba(179, 26, 29, 0.08);
+    color: var(--primary-dark);
+    border-radius: 999px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.95rem;
+    letter-spacing: 0.05em;
 }
 
 .category-tab:hover {
-    background: #e74c3c;
-    color: white;
+    background: rgba(179, 26, 29, 0.12);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
 }
 
 .category-tab.active {
-    background: #e74c3c;
+    background: linear-gradient(135deg, rgba(138, 20, 23, 0.95), rgba(179, 26, 29, 0.85));
     color: white;
-    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 18px 35px rgba(179, 26, 29, 0.2);
 }
 
 /* 视频展示区域 */
 .videos-section {
-    padding: 4rem 0;
-    background: #f8f9fa;
+    padding: 4.5rem 0;
+    background: var(--secondary-color);
 }
 
 .videos-grid {
@@ -111,17 +117,18 @@
 
 /* 视频卡片 */
 .video-card {
-    background: white;
-    border-radius: 20px;
+    background: var(--surface-color);
+    border-radius: 26px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+    transition: all 0.35s ease;
     position: relative;
+    border: var(--card-border);
 }
 
 .video-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+    transform: translateY(-12px);
+    box-shadow: 0 32px 60px rgba(47, 28, 25, 0.2);
 }
 
 .video-card.hidden {
@@ -131,7 +138,7 @@
 .video-thumbnail {
     position: relative;
     height: 220px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, rgba(138, 20, 23, 0.92), rgba(179, 26, 29, 0.85));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,7 +201,7 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    background: rgba(231, 76, 60, 0.9);
+    background: rgba(179, 26, 29, 0.9);
     color: white;
     padding: 5px 12px;
     border-radius: 15px;
@@ -204,13 +211,13 @@
 }
 
 .video-info {
-    padding: 2rem;
+    padding: 2.2rem;
 }
 
 .video-title {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #2c3e50;
+    color: var(--primary-dark);
     margin-bottom: 1rem;
     line-height: 1.4;
     display: -webkit-box;
@@ -220,8 +227,8 @@
 }
 
 .video-description {
-    color: #666;
-    line-height: 1.6;
+    color: var(--muted-text);
+    line-height: 1.7;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
     display: -webkit-box;
@@ -235,7 +242,7 @@
     gap: 1rem;
     margin-bottom: 1rem;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--muted-text);
     flex-wrap: wrap;
 }
 
@@ -243,10 +250,11 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    background: #f8f9fa;
-    padding: 4px 8px;
-    border-radius: 10px;
+    background: rgba(179, 26, 29, 0.08);
+    padding: 6px 10px;
+    border-radius: 999px;
     font-size: 0.8rem;
+    color: var(--primary-dark);
 }
 
 .video-tags {
@@ -257,10 +265,10 @@
 }
 
 .tag {
-    background: #e8f4fd;
-    color: #3498db;
+    background: rgba(179, 26, 29, 0.08);
+    color: var(--primary-dark);
     padding: 5px 12px;
-    border-radius: 15px;
+    border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 500;
 }
@@ -271,9 +279,9 @@
 }
 
 .btn-play, .btn-detail {
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
@@ -282,26 +290,26 @@
 }
 
 .btn-play {
-    background: #e74c3c;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
     color: white;
 }
 
 .btn-play:hover {
-    background: #c0392b;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+    box-shadow: 0 18px 32px rgba(179, 26, 29, 0.28);
 }
 
 .btn-detail {
-    background: transparent;
-    color: #e74c3c;
-    border: 2px solid #e74c3c;
+    background: rgba(179, 26, 29, 0.08);
+    color: var(--primary-dark);
+    border: 1px solid rgba(179, 26, 29, 0.25);
 }
 
 .btn-detail:hover {
-    background: #e74c3c;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
     color: white;
     transform: translateY(-2px);
+    border-color: transparent;
 }
 
 /* 模态框样式 */
@@ -318,16 +326,18 @@
 }
 
 .modal-content {
-    background-color: white;
+    background-color: #fff;
     margin: 2% auto;
     padding: 0;
-    border-radius: 20px;
+    border-radius: 26px;
     width: 95%;
     max-width: 1000px;
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
     animation: modalSlideIn 0.3s ease;
+    box-shadow: 0 40px 90px rgba(47, 28, 25, 0.25);
+    border: 1px solid rgba(179, 26, 29, 0.12);
 }
 
 .video-modal {
@@ -351,7 +361,7 @@
     top: 20px;
     font-size: 28px;
     font-weight: bold;
-    color: #aaa;
+    color: rgba(47, 28, 25, 0.4);
     cursor: pointer;
     z-index: 10;
     transition: color 0.3s ease;
@@ -365,7 +375,7 @@
 }
 
 .close:hover {
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
 .modal-body {
@@ -407,12 +417,12 @@
 }
 
 .video-details {
-    padding: 2rem;
+    padding: 2.2rem;
 }
 
 .video-detail-title {
     font-size: 1.8rem;
-    color: #2c3e50;
+    color: var(--primary-dark);
     margin-bottom: 1.5rem;
     line-height: 1.4;
 }
@@ -428,20 +438,20 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    background: #f8f9fa;
-    padding: 8px 12px;
-    border-radius: 10px;
+    background: rgba(179, 26, 29, 0.08);
+    padding: 8px 14px;
+    border-radius: 12px;
     font-size: 0.9rem;
-    color: #666;
+    color: var(--primary-dark);
 }
 
 .meta-item i {
-    color: #e74c3c;
+    color: var(--primary-color);
     width: 16px;
 }
 
 .video-detail-description h3 {
-    color: #2c3e50;
+    color: var(--primary-dark);
     font-size: 1.2rem;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
@@ -452,14 +462,14 @@
 }
 
 .video-detail-description p {
-    color: #666;
-    line-height: 1.7;
+    color: var(--muted-text);
+    line-height: 1.8;
     margin-bottom: 1rem;
 }
 
 .video-detail-description ul {
-    color: #666;
-    line-height: 1.7;
+    color: var(--muted-text);
+    line-height: 1.8;
     margin-bottom: 1rem;
     padding-left: 1.5rem;
 }
@@ -582,13 +592,14 @@
     text-align: center;
     margin: 2rem 0;
     padding: 1.5rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: var(--surface-color);
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+    border: var(--card-border);
 }
 
 .videos-stats h3 {
-    color: #2c3e50;
+    color: var(--primary-dark);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
@@ -601,21 +612,21 @@
 }
 
 .stat-item {
-    background: #f8f9fa;
+    background: rgba(179, 26, 29, 0.08);
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 14px;
     text-align: center;
 }
 
 .stat-number {
     font-size: 2rem;
     font-weight: 700;
-    color: #e74c3c;
+    color: var(--primary-color);
     display: block;
 }
 
 .stat-label {
-    color: #666;
+    color: var(--muted-text);
     font-size: 0.9rem;
     margin-top: 0.5rem;
 }
@@ -630,16 +641,16 @@
     width: 100%;
     max-width: 500px;
     padding: 15px 25px;
-    border: 2px solid #e74c3c;
+    border: 1px solid rgba(179, 26, 29, 0.25);
     border-radius: 30px;
     font-size: 1rem;
     outline: none;
     transition: all 0.3s ease;
-    background: white;
+    background: rgba(179, 26, 29, 0.05);
 }
 
 .search-input:focus {
-    box-shadow: 0 0 20px rgba(231, 76, 60, 0.2);
+    box-shadow: 0 0 25px rgba(179, 26, 29, 0.18);
     transform: translateY(-2px);
 }
 
